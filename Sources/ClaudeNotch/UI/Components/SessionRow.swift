@@ -1,6 +1,7 @@
 import SwiftUI
 
 /// Session list row: dot · project · activity + elapsed · trailing badge. Click focuses the terminal.
+@MainActor
 struct SessionRow: View {
     let session: SessionInfo
     let onTap: () -> Void

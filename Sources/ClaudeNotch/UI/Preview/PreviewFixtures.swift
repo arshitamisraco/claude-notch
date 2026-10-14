@@ -90,6 +90,7 @@ enum PreviewFixtures {
     }
 }
 
+@MainActor
 struct PreviewHost: View {
     let vm: NotchViewModel
     var body: some View {
@@ -99,6 +100,7 @@ struct PreviewHost: View {
     }
 }
 
+@MainActor
 struct NotchPreviews: PreviewProvider {
     static var previews: some View {
         Group {

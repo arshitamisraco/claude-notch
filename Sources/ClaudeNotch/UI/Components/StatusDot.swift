@@ -1,6 +1,7 @@
 import SwiftUI
 
 /// Status indicator. working = shimmer, question/approval/attention = pulse; others static.
+@MainActor
 struct StatusDot: View {
     let status: SessionStatus
     var size: CGFloat = 8

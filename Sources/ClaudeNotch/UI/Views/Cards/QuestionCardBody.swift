@@ -1,6 +1,7 @@
 import SwiftUI
 
 /// Question: option rows (1-4 keys), multiSelect toggles + Submit, multi-question stepper.
+@MainActor
 struct QuestionCardBody: View {
     let item: NotchItem
     let request: QuestionRequest
@@ -59,6 +60,7 @@ struct QuestionCardBody: View {
     }
 }
 
+@MainActor
 struct OptionRow: View {
     let index: Int
     let option: QuestionOption

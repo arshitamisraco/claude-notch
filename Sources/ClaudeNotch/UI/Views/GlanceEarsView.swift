@@ -1,6 +1,7 @@
 import SwiftUI
 
 /// Glance: status dot in the left ear, count / elapsed / check in the right ear. The notch stays empty.
+@MainActor
 struct GlanceEarsView: View {
     let vm: NotchViewModel
 

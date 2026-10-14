@@ -1,6 +1,7 @@
 import SwiftUI
 
 /// Expanded: top bar beside the camera, active card, session list.
+@MainActor
 struct ExpandedView: View {
     let vm: NotchViewModel
 

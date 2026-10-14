@@ -1,6 +1,7 @@
 import SwiftUI
 
 /// Small keyboard hint chip, e.g. "⌘↩".
+@MainActor
 struct KeyHint: View {
     let text: String
     var onLight: Bool = false

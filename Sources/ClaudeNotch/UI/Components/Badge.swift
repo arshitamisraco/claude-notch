@@ -1,6 +1,7 @@
 import SwiftUI
 
 /// Capsule count/label. Tinted when an approval is pending.
+@MainActor
 struct Badge: View {
     let text: String
     var tinted: Bool = false

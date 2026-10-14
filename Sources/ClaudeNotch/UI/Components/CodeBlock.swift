@@ -1,6 +1,7 @@
 import SwiftUI
 
 /// Monospaced, selectable block. Two lines collapsed with "Show more"; horizontal scroll.
+@MainActor
 struct CodeBlock: View {
     let text: String
     var collapsedLines: Int = 2

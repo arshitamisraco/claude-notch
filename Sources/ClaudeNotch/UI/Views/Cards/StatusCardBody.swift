@@ -1,6 +1,7 @@
 import SwiftUI
 
 /// Done / error / attention: message and a Jump to action.
+@MainActor
 struct StatusCardBody: View {
     let item: NotchItem
     let vm: NotchViewModel

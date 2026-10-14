@@ -1,6 +1,7 @@
 import SwiftUI
 
 /// Peek: one-line headline + project, shown below the camera row.
+@MainActor
 struct PeekView: View {
     let vm: NotchViewModel
     let item: NotchItem

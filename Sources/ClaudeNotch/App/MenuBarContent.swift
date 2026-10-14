@@ -1,6 +1,7 @@
 import AppKit
 import SwiftUI
 
+@MainActor
 struct MenuBarContent: View {
     let env: AppEnvironment
 

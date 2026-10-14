@@ -1,6 +1,7 @@
 import SwiftUI
 
 /// Card for one item: header, sub-header, kind-specific body, resolution state.
+@MainActor
 struct EventCard: View {
     let item: NotchItem
     let vm: NotchViewModel
@@ -60,6 +61,7 @@ struct EventCard: View {
     }
 }
 
+@MainActor
 struct ResolutionRow: View {
     let label: String
 

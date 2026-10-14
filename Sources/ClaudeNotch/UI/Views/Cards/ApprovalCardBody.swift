@@ -1,6 +1,7 @@
 import SwiftUI
 
 /// Approval: headline, command/path code block, Deny / Always allow / Allow, "Answer in terminal".
+@MainActor
 struct ApprovalCardBody: View {
     let item: NotchItem
     let request: ApprovalRequest

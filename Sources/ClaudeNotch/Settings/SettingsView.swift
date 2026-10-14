@@ -1,6 +1,7 @@
 import AppKit
 import SwiftUI
 
+@MainActor
 struct SettingsView: View {
     @Bindable var env: AppEnvironment
 
@@ -23,6 +24,7 @@ struct SettingsView: View {
 
 // MARK: General
 
+@MainActor
 private struct GeneralTab: View {
     @Bindable var settings: AppSettings
 
@@ -66,6 +68,7 @@ private struct GeneralTab: View {
 
 // MARK: Hooks
 
+@MainActor
 private struct HooksTab: View {
     @Bindable var settings: AppSettings
     let hooks: HooksController
@@ -172,6 +175,7 @@ private struct HooksTab: View {
 
 // MARK: About
 
+@MainActor
 private struct AboutTab: View {
     private var version: String {
         let info = Bundle.main.infoDictionary

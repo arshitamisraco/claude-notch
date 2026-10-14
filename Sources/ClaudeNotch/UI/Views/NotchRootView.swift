@@ -16,6 +16,7 @@ struct ContentHeightKey: PreferenceKey {
 }
 
 /// Root of the panel: a fixed transparent canvas with the notch pill anchored top-centre.
+@MainActor
 struct NotchRootView: View {
     let vm: NotchViewModel
 
