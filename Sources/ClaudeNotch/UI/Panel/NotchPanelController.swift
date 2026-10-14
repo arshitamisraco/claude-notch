@@ -77,7 +77,7 @@ final class NotchPanelController {
             return MainActor.assumeIsolated { self.viewModel.handleKey(event) }
         }
         let root = NotchRootView(vm: viewModel)
-        let host = NSHostingView(rootView: root)
+        let host = NotchHostingView(rootView: root)
         host.frame = CGRect(origin: .zero, size: Theme.Layout.panelSize)
         host.autoresizingMask = [.width, .height]
         panel.contentView = host

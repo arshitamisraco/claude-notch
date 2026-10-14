@@ -1,4 +1,5 @@
 import AppKit
+import SwiftUI
 
 /// Borderless, non-activating panel that sits over the notch.
 /// Only becomes key while expanded so keyboard shortcuts work without activating the app.
@@ -28,6 +29,11 @@ final class NotchPanel: NSPanel {
         appearance = NSAppearance(named: .darkAqua)
     }
 
+    /// AppKit normally pushes windows below the menu bar; the notch panel must overlap it.
+    override func constrainFrameRect(_ frameRect: NSRect, to screen: NSScreen?) -> NSRect {
+        frameRect
+    }
+
     override var canBecomeKey: Bool { allowsKey }
     override var canBecomeMain: Bool { false }
 
@@ -37,4 +43,9 @@ final class NotchPanel: NSPanel {
         }
         super.sendEvent(event)
     }
+}
+
+/// Hosting view that ignores the notch safe area, so SwiftUI content starts at the very top of the screen.
+final class NotchHostingView<Content: View>: NSHostingView<Content> {
+    override var safeAreaInsets: NSEdgeInsets { NSEdgeInsetsZero }
 }
