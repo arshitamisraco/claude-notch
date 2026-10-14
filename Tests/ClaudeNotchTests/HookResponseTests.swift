@@ -42,7 +42,7 @@ final class HookResponseTests: XCTestCase {
         XCTAssertEqual(hso?["hookEventName"]?.stringValue, "PreToolUse")
         XCTAssertEqual(hso?["permissionDecision"]?.stringValue, "allow")
         let updated = hso?["updatedInput"]
-        XCTAssertEqual(updated?["answers"], .object(["Which?": .string("A")]))
+        XCTAssertEqual(updated?["answers"], JSONValue.object(["Which?": JSONValue.string("A")]))
         XCTAssertEqual(updated?["questions"], original["questions"])
         XCTAssertEqual(updated?["metadata"], original["metadata"])
     }
