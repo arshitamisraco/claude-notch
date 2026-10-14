@@ -40,13 +40,15 @@ final class CoreRuntime {
             token: token,
             handler: handler,
             onDisconnect: { [weak self] (requestID: UUID) in
+                guard let runtime = self else { return }
                 Task { @MainActor in
-                    self?.router.clientDisconnected(requestID)
+                    runtime.router.clientDisconnected(requestID)
                 }
             },
             onState: { [weak self] (state: ServerState) in
+                guard let runtime = self else { return }
                 Task { @MainActor in
-                    guard let runtime = self, runtime.generation == gen else { return }
+                    guard runtime.generation == gen else { return }
                     runtime.store.setServerState(state)
                 }
             }

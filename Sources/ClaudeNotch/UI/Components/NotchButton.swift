@@ -4,7 +4,6 @@ enum NotchButtonKind {
     case primary, secondary, dangerGhost, ghost
 }
 
-@MainActor
 struct NotchPressStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
